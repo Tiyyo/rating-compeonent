@@ -13,13 +13,18 @@ selectedBtn.forEach((btn) => {
     btn.addEventListener('click', (e) => {
         chosenRate.textContent = e.target.textContent;
         chosenRate.innerText = chosenRate.textContent
+        console.log(chosenRate.textContent)
     })
 })
 
+
 submit.addEventListener('click', () =>{
-    console.log(appreciationState)
+    if ( chosenRate.innerText ==! "null"){
+        return alert ("Pease ... Rate")
+        console.log(chosenRate.innerText)}
+    else{
     ratingState.style.display = "none"
     appreciationState.style.display = "flex"
-    
+    }
 })
 
